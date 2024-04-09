@@ -12,6 +12,7 @@ let listNames;
 let newUpDate;
 let listDisplay="";
 let taskCountDisplay=""
+let login=0;
 //the varient no. is the number of times the list have modified
 let varient= Number(localStorage.getItem('varient'));
 if(varient== null){
@@ -42,6 +43,7 @@ setTimeout(function(){display(toDoList)}, 500);
 
 // CREATE
 function createNote(callback){
+    if(login>0){
     listNames= Object.keys(toDoList);
     if(listNames.length>0){
     let position = listNames.length;
@@ -51,6 +53,11 @@ function createNote(callback){
     else{
         created=0
     }
+    }else{
+    login++;
+    let position =1;
+    created=0;
+} 
     created++;
     let objectNote= "0"+ varient+ 'note';
     objectNote= objectNote+ created;
