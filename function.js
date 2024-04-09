@@ -77,7 +77,7 @@ function createNote(){
 
 //RETRIEVE
 function display(notes){
-    if(type of toDoList != null){
+    if(typeof toDoList != null){
     sortList(toDoList);
     index=0;
     listNames= Object.keys(toDoList);
