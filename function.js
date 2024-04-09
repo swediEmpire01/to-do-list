@@ -18,6 +18,7 @@ let objectLength=0;
 let varient= Number(localStorage.getItem('varient'));
 if(varient== null){
     varient=0;
+    login=0;
 }else{
 varient= Number(varient);
     if(varient>=4){
