@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script src="function.js"></script>
+
+</head>
+<body>
+    <main>
+        <div class="container">
+            <label for="tittle"><h1>TO DO LIST</h1></label><br>
+            <div class="make-list">
+                <input type="text" id="tittle" name="tittle"   required placeholder="Task to be done..."> 
+                <button type="submit" id="Update"  onclick="updateDone()">Update</button>
+                <button id="submit" onclick="createNote(display)" type="submit"> <img src="/assets/subway--add.svg" alt="add-to-list-logo">Add</button>
+            </div>
+            <div id="taskCount"></div>
+            <div id="disply"></div>
+            <div id="done"><button id="deleteDone" onclick="done(display)" type="button"><img src="/assets/ic--baseline-delete.svg" alt="delete-logo">Done </button></div>
+    
+        </div>
+    </main>
+</body>
+</html>

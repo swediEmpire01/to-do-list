@@ -1,0 +1,163 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: hsl(42, 81%, 62%);
+    font-family:"fontTwo", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+div.container{
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    width: 320px;
+}
+h1{
+    margin: 0px;
+    font-family: "font";
+    font-weight: 700;
+    color: #000000;
+}
+
+div#taskCount{
+    text-align: center;
+    justify-content: center;
+    display:flex ;
+    margin: 5px 0px;
+}
+h2{
+    margin: 0px;
+    height: auto;
+    width: auto;
+    font-size: 0.9em;
+    margin: 0px 5px;
+    color: #5493ff;
+}
+p{
+    margin: 0px;
+    font-size: 0.9em;
+}
+div.make-list{
+    display: flex;
+    justify-content: space-around;
+}
+div.make-list input{
+   outline: none; 
+   border: none;
+   border-bottom: solid 1px #515151;
+   border-bottom-width: 80%;
+   padding: 5px;
+   width: 200px;
+   height: 30px;
+   margin: 0px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+div.make-list button{
+    border: none;
+    margin: none ;
+    height: 40px;
+    width: 90px;
+    background-color: #5493ff;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+div.make-list button:hover{
+    background-color: hsl(218, 100%, 75%);
+}
+div.make-list button#Update{
+    display: none;
+    background-color: #ecbe4f;
+}
+div.make-list button img{
+    width: 15px;
+    margin: 0px 5px;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+
+div.note{
+    width: 95%;
+    margin: auto;
+    background-color: #fff;
+    color: #000000;
+    padding: 7.5px 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 25px #0945ae42;
+    display: flex;
+    justify-content: space-between;
+
+    animation: fade 0.3s linear forwards;
+}
+div.list{
+    display: flex;
+}
+div.check{
+    width: 14px;
+}
+div.list-display{
+    padding:0px 15px;
+}
+
+button.edit{
+    width: 35px ;
+    height: 30px;
+    border-radius: 2px;
+    border: none;
+    margin: 0px;
+    color: #fff;
+    background-color: #00a848;
+}
+button.edit img{
+    width: 20px;
+}
+div.edits{
+    width: 35px;
+}
+
+button#deleteDone{
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    font-size: 1em;
+    background-color: #ff5050;
+    display: none;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button#deleteDone img{
+    width: 20px;
+}
+
+@font-face {
+    font-family: "font";
+    src: url("fonts/KidGames.ttf");
+}
+@font-face {
+    font-family: "fontTwo";
+    src: url("fonts/CaviarDreams_Bold.ttf");
+}
