@@ -1,4 +1,4 @@
-//listDisplay+= `  <div class="note"><Input type="checkbox" id="${index}"><label for="${index}">${toDoList[objectNote]}</label></Input></div>`
+
 var CREATE;
 var UPDATE;
 
@@ -6,13 +6,14 @@ setTimeout(function(){
     CREATE= document.getElementById("submit");
     UPDATE= document.getElementById("Update");
 }, 1000)
-let toDoList;
+let toDoList= {};
 let index;
-let listNames;
+let listNames=[];
 let newUpDate;
 let listDisplay="";
 let taskCountDisplay=""
 let login=0;
+let objectLength=0;
 //the varient no. is the number of times the list have modified
 let varient= Number(localStorage.getItem('varient'));
 if(varient== null){
@@ -31,6 +32,7 @@ let created= Number(localStorage.getItem('created'));
 if(created== null){
     created=0;
     toDoList={};
+    login=0;
 }
 else{
     toDoList= localStorage.getItem("notes");
@@ -39,7 +41,7 @@ else{
     console.log(toDoList);
 }
 //displays the toDoLists after waiting for the browser to load
-setTimeout(function(){display(toDoList)}, 500);
+setTimeout(function(){display()}, 500);
 
 // CREATE
 function createNote(callback){
@@ -65,31 +67,35 @@ function createNote(callback){
     if(value.length>0){
         toDoList[objectNote]= value ;
         saveValues();
-        //console.log(toDoList);
-        callback(toDoList);
+        console.log(toDoList);
+        display();
     }
     else{
-        display(toDoList);
+        display();
     }
 }
 
 //RETRIEVE
 function display(notes){
+    if(type of toDoList! = null){
     sortList(toDoList);
     index=0;
     listNames= Object.keys(toDoList);
+    objectLength= listNames.length;
 
-    if(listNames.length <1){
+}else{objectLength= 0} 
+
+    if(objectLength <1){
         document.getElementById("deleteDone").style.display= "none";
     }
     else{
         document.getElementById("deleteDone").style.display= "flex";
     }
     //iterate of the object code by geeksforgeeks.org
-    for(let note in notes){
+    for(let note in toDoList){
         //gets the propertyNames in the objects
-        if(notes.hasOwnProperty(note)){
-            note= notes[note];
+        if(toDoList.hasOwnProperty(note)){
+            note= toDoList[note];
             let list=listNames[index];
             list= list.slice(list.indexOf("n"));
             listDisplay+= ` <div class="note">
@@ -118,6 +124,9 @@ function display(notes){
     taskCountDisplay="";
     let taskCount= listNames.length;
     taskCount= `<h2>${taskCount}</h2>`;
+    if(typeof taskCount== null){
+        taskCount=0
+    } 
     taskCountDisplay= `<p>You have</p> ${taskCount}<p> task(s) to complete </p>`;
     document.getElementById("taskCount").innerHTML= taskCountDisplay;
 
