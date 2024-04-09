@@ -44,7 +44,7 @@ else{
 setTimeout(function(){display()}, 500);
 
 // CREATE
-function createNote(callback){
+function createNote(){
     if(login>0){
     listNames= Object.keys(toDoList);
     if(listNames.length>0){
