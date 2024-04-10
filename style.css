@@ -140,12 +140,12 @@ button#deleteDone{
     color: #fff;
     font-size: 1em;
     background-color: #ff5050;
-    display: none;
+    display: flex;
     border: none;
     border-radius: 5px;
     margin: 10px 0px;
     cursor: pointer;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
