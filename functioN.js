@@ -18,7 +18,7 @@ let created= null;
 let varient=0;
 
 
-logedIn= localStorage.getItem('but');
+logedIn= localStorage.getItem('login');
 console.log(logedIn);
 if(typeof logedIn== null){
     logedIn=0;
